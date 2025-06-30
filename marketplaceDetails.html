@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rynho Tech - Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="marketplaceStyle.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo/faviconRT.png">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- JS Personalizzato -->
+    <script src="marketplaceDetails.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Spinner di caricamento -->
+    <div id="spinner"
+        class="d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 bg-white"
+        style="z-index: 1050;">
+        <div class="spinner-border" role="status"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="mb-5">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="marketplaceHome.html">
+                    <img src="img/logo/logoRynoTech-removebg.png" alt="Logo Rynho Tech" class="img-fluid me-2"
+                        style="width: 100px;">
+                </a>
+
+                <!-- Bottone Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin"
+                    aria-controls="navbarAdmin" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenuto Collassabile -->
+                <div class="collapse navbar-collapse" id="navbarAdmin">
+
+                    <!-- Menu Navigazione -->
+                    <ul class="navbar-nav me-3 mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="marketplaceHome.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Graphics Cards</a></li>
+                                <li><a class="dropdown-item" href="#">Processors (CPU)</a></li>
+                                <li><a class="dropdown-item" href="#">Motherboards</a></li>
+                                <li><a class="dropdown-item" href="#">Memory (RAM)</a></li>
+                                <li><a class="dropdown-item" href="#">Storage (SSD/HDD)</a></li>
+                                <li><a class="dropdown-item" href="#">Cases</a></li>
+                                <li><a class="dropdown-item" href="#">Power Supplies</a></li>
+                                <li><a class="dropdown-item" href="#">Cooling Systems</a></li>
+                                <li><a class="dropdown-item" href="#">Monitors</a></li>
+                                <li><a class="dropdown-item" href="#">Peripherals</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">All Products</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Top Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">New Arrivals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                    </ul>
+
+                    <!-- Spazio Vuoto Flessibile -->
+                    <div class="flex-grow-1 d-none d-md-block"></div>
+
+                    <!-- Searchbar su md+ -->
+                    <form class="d-none d-md-flex align-items-center me-3" role="search">
+                        <input class="campoCerca form-control me-2" type="search" placeholder="Search Products..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+
+                    <!-- Profilo Admin -->
+                    <ul class="navbar-nav ms-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> Admin
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="marketplaceBackOffice.html">Back Office</a></li>
+                                <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Searchbar MOBILE: solo su XS e SM -->
+        <div class="bg-dark py-2 d-md-none">
+            <div class="container-fluid d-flex justify-content-center">
+                <form class="d-flex align-items-center w-100 px-2" role="search">
+                    <input class="campoCerca form-control me-2" type="search" placeholder="Search Products..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex-grow-1 d-flex flex-column container">
+
+        <div class="d-flex mt-4 mb-3">
+            <a href="marketplaceHome.html" class="btn btn-dark btn-lg d-flex align-items-center">
+                <i class="bi bi-arrow-left me-2 fs-4"></i>Back
+            </a>
+        </div>
+
+        <h1 class="text-center mb-5">Rynho Tech - Details</h1>
+
+
+        <div id="container-details" class="container flex-grow-1 d-flex flex-column justify-content-center mb-2">
+            <!-- <div id="productsRow" class="row flex-grow-1"> -->
+            <!-- <div class="col-3">
+                    <div class="card">
+                        <img src="img/logo/logo.png" alt="Immagine prodotto">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <a href="/details.html" class="btn btn-primary d-flex justify-content-center">Details</a>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2025 <strong>Rhyno Tech</strong> - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
